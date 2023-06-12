@@ -6,15 +6,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class
-//@Table(name = "user")
-public class User {
+//@Table(name = "mascota")
+public class Mascota {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
   private Integer id;
 
   private String name;
 
-  private String email;
+  private String raza;
+
+  private String propietario;
 
   public Integer getId() {
     return id;
@@ -32,11 +34,18 @@ public class User {
     this.name = name;
   }
 
-  public String getEmail() {
-    return email;
+  public String getRaza() {
+    return raza;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void setRaza(String raza) {
+    this.raza = raza;
+  }
+  public String getPropietario() {
+    return propietario;
+  }
+
+  public void setPropietario(String propietario) {
+    this.propietario = propietario;
   }
 }

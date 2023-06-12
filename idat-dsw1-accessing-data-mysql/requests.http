@@ -1,34 +1,38 @@
 
-GET http://localhost:8080/demo/all
+GET http://localhost:8080/mascotas/all
 
 ###
 
-POST http://localhost:8080/demo/add
+POST http://localhost:8080/mascotas/add
 Content-Type: application/x-www-form-urlencoded
 
-name=Mateo
-&email=otroalumno@idat.edu.pe
+&name=lucas
+&rasa=poodle
+&propietario=luis
+###
+GET http://localhost:8080/mascotas/all
+
+
+GET http://localhost:8080/mascotas/ver/2
+
 ###
 
-GET http://localhost:8080/demo/ver/2
-
-###
-
-PUT http://localhost:8080/demo/edit
+PUT http://localhost:8080/mascotas/edit
 Content-Type: application/x-www-form-urlencoded
 
 id=2
-&name=Mateo IDAT
-&email=correoidatdemateo@idat.edu.pe
+&name=lucas
+&rasa=poodle
+&propietario=luis
 
 ###
 
-DELETE http://localhost:8080/demo/del
+DELETE http://localhost:8080/mascotas/del
 Content-Type: application/x-www-form-urlencoded
 
 id=1
 
 ###
 
-GET http://localhost:8080/demo/get/report
+GET http://localhost:8080/mascotas/get/report
 
